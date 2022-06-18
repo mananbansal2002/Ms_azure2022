@@ -1,4 +1,4 @@
-body{
+body:read-only{
     background: #f7f7ff;
     margin-top:20px;
 }
