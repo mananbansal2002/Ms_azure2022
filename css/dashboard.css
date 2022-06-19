@@ -177,8 +177,8 @@ h4[id="name"] {
 }
 
 .statistics .box {
-	background-color: var(--dk-dark-bg);
-	background-color: white;
+	/* background-color: var(--dk-dark-bg); */
+	/* background-color: rgb(47, 77, 152); */
 	color: black;
 }
 
