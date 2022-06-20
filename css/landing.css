@@ -274,8 +274,8 @@ background: linear-gradient(262.69deg, #2A94F4 -81.97%, #0B4870 95.14%);
   .landing {
     flex-direction: column-reverse;
     margin-left: 0;
-    padding-bottom: 80px;
-    row-gap: 60px;
+    /* padding-bottom: 80px; */
+    /* row-gap: 60px; */
   }
 }
 
