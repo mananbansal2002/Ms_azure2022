@@ -1,0 +1,580 @@
+.button {
+    border: 1px solid transparent;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    display: inline-block;
+    font: var(--button-button);
+    text-decoration: none;
+    cursor: pointer;
+    color: currentColor;
+    background: transparent;
+    border-radius: .25rem;
+    transition: transform 0.1s;
+    border-radius: 0.25rem;
+}
+
+.button:active {
+    transform: scale(.95);
+}
+
+.button.is-primary {
+    background: var(--blue10);
+    color: var(--white);
+}
+
+.button.is-secondary {
+    border: 1px solid var(--gray20);
+}
+
+.button.is-primary:hover,
+.button.is-primary:focus {
+    background: var(--blue30);
+}
+
+.button:hover,
+.button:focus,
+.button.is-secondary:hover,
+.button.is-secondary:focus,
+.button.is-rounded:focus,
+.button.is-rounded:hover, 
+.button.is-compact:hover 
+.button.is-compact:focus {
+    outline: none;
+    background: var(--gray10);
+}
+
+.button.is-rounded {
+    border-radius: 1.25rem;
+    color: var(--blue20);
+}
+
+/* .button.is-compact {
+ border-radius: 50%;
+ padding: .5rem;
+} */
+
+.button i {
+    font-size: 1.5rem;
+    color: var(--gray50);
+}
+
+.button i, .button span {
+    vertical-align: middle;
+}
+
+.button.is-shadowed {
+    box-shadow: 1.0719px 30.9815px 92px rgba(0, 0, 0, 0.0274815), 0.412881px 11.9336px 29.3037px rgba(0, 0, 0, 0.0425185), 0.0873403px 2.52442px 7.4963px rgba(0, 0, 0, 0.07);
+}
+
+.calendarStatus {
+    display: inline-flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.calendarStatus-date {
+    font: var(--subtitle-subtitle1);
+}
+
+
+.calendar, .calendar-day {
+    color: var(--gray20);
+    padding-inline: 1.5rem;
+    --minBlockSize: 4rem;
+    --maxBlockSize: auto;
+
+    --minInlineSize: 5rem;
+    --maxInlineSize: 1fr;
+    position: relative;
+}
+
+.calendar-week {
+    display: grid;
+    grid-template-columns: auto repeat(7, minmax(var(--minInlineSize), var(--maxInlineSize)));
+    grid-template-rows: 7rem repeat(24, minmax(var(--minBlockSize), var(--maxBlockSize)));
+    min-block-size: 700px;
+}
+
+/* TAREA */
+
+.calendar-day {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 7rem repeat(24, minmax(var(--min-block-size), var(--max-block-size)));
+    min-block-size: 700px;
+  }
+
+
+  .search {
+    border: none;
+    border-radius: 4px;
+    background: var(--gray10);
+    padding: 0.625rem;
+    padding-inline-start: 2rem;
+    background-image: url('../icons/Icon=users.svg');
+    background-repeat: no-repeat;
+    background-position: left 0.5rem center;
+    background-size: 1rem;
+  }
+  
+  .search::placeholder {
+    color: var(--gray30);
+    font: var(--body1-regular);
+  }
+  
+  .myCalendars summary {
+    font: var(--body1-medium);
+    color: var(--gray30);
+    margin-block-end: 0.625rem;
+    padding-inline-end: 6rem;
+  
+    list-style: none;
+    cursor: pointer;
+  
+    background-image: url('../icons/Icon=chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+  }
+  
+  .myCalendars[open] summary {
+    background-image: url('../icons/Icon=chevron-up.svg');
+  }
+  
+  .myCalendars-check {
+    margin-block-end: 0.75rem;
+  }
+  
+  .myCalendars-check input {
+    display: none;
+  }
+  
+  .myCalendars-check label {
+    padding-inline-start: 1.5rem;
+    background-image: url('../icons/Icon=check.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1rem;
+    user-select: none;
+  }
+  
+  .myCalendars-check input:checked + label{
+    background-image: url('../icons/Icon=check-square.svg');
+  }
+  .createTask {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.currentTime {
+    block-size: 2px;
+    background: var(--red10);
+    inline-size: 100%;
+    inline-size: 5rem;
+    position: absolute;
+    inset-inline-start: 280px;
+    inset-block-start: 190px;
+    z-index: 2;
+}
+
+.currentTime::before {
+    content: '';
+    display: block;
+    inline-size: 1rem;
+    block-size: 1rem;
+    background: var(--red10);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+:root {
+    --white: #fffffe; 
+    --gray50: #222222; 
+    --gray20: #70757a; 
+    --gray10: #f1f3f4; 
+    --gray30: #3c4043; 
+    --blue10: #1a73e8; 
+    --blue20: #039be5; 
+    --red10: #e8453c; 
+    --green10: #33b679; 
+    --blue30: #1967d2; 
+    --body1-regular: 400 0.875rem/1.25rem Roboto; 
+    --body1-medium: 500 0.875rem/1.25rem Roboto; 
+    --body3-medium: 500 0.625rem/0.5rem Roboto; 
+    --body3-regular: 400 0.625rem/0.5rem Roboto; 
+    --body2-regular: 400 0.75rem/1rem Roboto; 
+    --body2-medium: 500 0.75rem/1rem Roboto; 
+    --button-button: 500 0.875rem/1rem Roboto; 
+    --subtitle-subtitle1: 400 1.375rem/1.75rem Roboto; 
+}
+
+body {
+    font: var(--body1-regular);
+    margin: 0;
+    color:  var(--gray50);
+    background: var(--white);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --gray50: #fffffe;
+        --gray20: #c1c1c1;
+        --white: #222222;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1.5rem;
+    border-block-end: 1px solid var(--gray10);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;   
+}
+
+.header-primary {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.header-secondary {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.hourCell {
+    place-self: start end;
+    transform: translateY(-50%);
+    font: var(--body3-regular);
+    padding-inline-end: 1rem;
+    position: relative;
+}
+
+.hourCell::before {
+    content: '';
+    inline-size: .5rem;
+    block-size: 1px;
+    background: currentColor;
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-end: 50%;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?aa7569');
+    src:  url('../fonts/icomoon.eot?aa7569#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?aa7569') format('truetype'),
+      url('../fonts/icomoon.woff?aa7569') format('woff'),
+      url('../fonts/icomoon.svg?aa7569#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    /* speak: never; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-calendar:before {
+    content: "\e900";
+  }
+  .icon-checkSquare:before {
+    content: "\e901";
+  }
+  .icon-check:before {
+    content: "\e902";
+  }
+  .icon-chevronDown:before {
+    content: "\e903";
+  }
+  .icon-chevronLeft:before {
+    content: "\e904";
+  }
+  .icon-chevronRight:before {
+    content: "\e905";
+  }
+  .icon-chevronUp:before {
+    content: "\e906";
+  }
+  .icon-clock:before {
+    content: "\e907";
+  }
+  .icon-gps:before {
+    content: "\e908";
+  }
+  .icon-hamburguerButton:before {
+    content: "\e909";
+  }
+  .icon-helpCircle:before {
+    content: "\e90a";
+  }
+  .icon-plus:before {
+    content: "\e90b";
+  }
+  .icon-search:before {
+    content: "\e90c";
+  }
+  .icon-settings:before {
+    content: "\e90d";
+  }
+  .icon-text:before {
+    content: "\e90e";
+  }
+  .icon-users:before {
+    content: "\e90f";
+  }
+  .icon-video:before {
+    content: "\e910";
+  }
+  .input {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.input i {
+    font-size: 1.5rem;
+}
+
+.input.is-outstanding input {
+    font: var(--subtitle-subtitle1);
+}
+
+.input-body {
+    flex: 1;
+    display: flex;
+}
+
+.input input,
+.input textarea {
+    flex: 1;
+    font: var(--body1-regular);
+    padding-block: .625rem;
+    padding-inline: .75rem;
+    border: none;
+    outline: none;
+    border-radius: .25rem;
+}
+
+.input input:focus,
+.input input:hover,
+.input textarea:focus,
+.input textarea:hover {
+    background-color: var(--gray10);
+}
+
+.input input:focus, 
+.input textarea:focus {
+    box-shadow: 0 2px 0 var(--blue10);
+}
+.miniCalendar {
+    --cellSize: 1.75rem;
+    max-inline-size: 12.25rem;
+}
+
+.miniCalendar-date {
+    font: var(--body1-medium);
+}
+
+.miniCalendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, var(--cellSize));
+    grid-template-rows: var(--cellSize);
+    text-align: center;
+    font: var(--body3-regular);
+    line-height: var(--cellSize);
+    margin-block-end: .5rem;
+}
+
+.miniCalendar-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-start: .25rem;
+}
+
+.miniCalendar-month {
+    font: var(--body3-regular);
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(7, var(--cellSize));
+    grid-template-rows: repeat(6, var(--cellSize));
+}
+
+.miniCalendar-monthDay {
+    line-height: var(--cellSize);
+}
+
+.miniCalendar-monthDay.is-selected {
+    background: var(--blue10);
+    color: var(--white);
+    border-radius: 50%;
+}
+.miniCalendar-monthDay.is-inactive {
+    color: var(--gray20);
+}
+
+.modal {
+    flex-direction: column;
+    gap: 1.5rem;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    padding-inline: 3rem;
+    padding-block: 1.5rem;
+    margin: 0;
+    max-inline-size: 28rem;
+    inline-size: 100%;
+    border-radius: .25rem;
+    border: none;
+    box-shadow: 1.0719px 30.9815px 92px rgba(0, 0, 0, 0.0274815), 0.412881px 11.9336px 29.3037px rgba(0, 0, 0, 0.0425185), 0.0873403px 2.52442px 7.4963px rgba(0, 0, 0, 0.07);
+}
+
+.modal[open] {
+    display: flex;
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 16.25rem 1fr;
+    grid-template-rows: 6rem 1fr;
+    block-size: 100vh;
+    grid-template-areas: "sidebar calendar";
+}
+
+/* .page .header {
+    grid-area: header;
+} */
+
+.page .sidebar {  
+    grid-area: sidebar; 
+
+}
+
+.page .calendar {
+    grid-area: calendar;
+}.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+}
+.select {
+    border: 1px solid var(--gray20);
+    padding-inline-start: .75rem;
+    padding-inline-end: 2rem;
+    padding-block-start: .5rem;
+    padding-block-end: .5rem;
+    border-radius: .25rem;
+    font: var(--button-button);
+
+    appearance: none;
+    background-image: url('../icons/Icon=chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: right .5rem center;
+}
+.page {
+    display: grid;
+    grid-template-columns: 16.25rem 1fr;
+    grid-template-rows: 6rem 1fr;
+    block-size: 100vh;
+    grid-template-areas:  "sidebar calendar";
+}
+
+.page .header {
+    grid-area: header;
+}
+
+.page .sidebar {  
+    grid-area: sidebar; 
+
+}
+
+.page .calendar {
+    grid-area: calendar;
+}
+.taskCell {
+    border-inline-start: 1px solid currentColor;
+    border-block-end: 1px solid currentColor;
+    padding: .25rem;
+}
+
+.taskCell.is-active::before {
+    content: '(Sin titulo)';
+    font-size: small;
+    background: #c6dafc;
+    padding: .25rem;
+    display: block;
+    border-radius: .25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.task {
+    background: var(--blue10);
+    color: var(--white);
+    border-radius: .25rem;
+    padding-inline: 1rem;
+    padding-block: .625rem;
+    overflow: hidden;
+    font: var(--body2-medium);
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.task p {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.timezoneCell {
+    font: var(--body3-regular);
+    position: sticky;
+    inset-block-start: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-inline-end: 1rem;
+    white-space: nowrap;
+    background: var(--white);
+    z-index: 2;
+}
+
+.timezoneCell::before {
+    content: '';
+    inline-size: .5rem;
+    block-size: 1px;
+    background-color: var(--gray20);
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+}

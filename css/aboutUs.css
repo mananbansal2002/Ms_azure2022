@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Catamaran:wght@100;400&family=Comforter&family=Inter:wght@300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@200&family=PT+Sans&display=swap');
+
+*{
+        font-family: 'Inter', sans-serif;
+        /* background-color: white; */
+        
+      }
+
+      .aboutUs{
+        width: 70%;
+        margin: auto;
+
+      }
+      .about-wrapper-1{
+        margin-bottom: 3rem;
+        background: url("./images/image.png");
+      }
+.about-wrapper-1 h1{
+    margin: auto;
+    padding: 3rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    line-height: 110.02%;
+/* or 66px */
+
+letter-spacing: 0.005em;
+
+color: #135B90;
+font-weight: 700;
+}
+.about-wrapper-1 p{
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    font-style: normal;
+font-weight: 700;
+font-size: 17px;
+line-height: 18px;
+text-align: center;
+
+color: #8D8C8C;
+}
+.about-wrapper-2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+ }
+ .about-wrapper-2 img{
+    margin-right: 2rem;
+    height: 301px;
+    width: 307px;
+    border-radius: 18px;
+ }
+ .about-wrapper-2 h1{
+    color: #36526B;
+ }
+ .second{
+    margin-left: 1.7rem;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    
+color: #8D8C8C;
+ }
+ @media(max-width: 1100px)
+ {
+    .about-wrapper-2{
+        flex-direction: column;
+        
+    }
+    .about-wrapper-2 img{
+        /* margin-right: auto; */
+     }
+ }
+ @media(max-width: 500px)
+ {
+    .aboutUs{
+        width: 90%;
+        margin: auto;
+
+      }
+      .second{
+        width: 90%;
+      }
+      .about-wrapper-1 h1{
+        margin: auto;
+        padding: 1rem;
+        padding-bottom: 1.5rem;
+       text-align: center;
+    }
+ }
+  
+.about-wrapper-2 h1{
+    /* display: flex;
+    align-content: flex-start;
+    margin: 2rem; */
+    /* margin: auto; */
+    /* padding: 3rem;
+    padding-bottom: 2rem;
+    
+    justify-content: center; */
+}
+.about-wrapper-2 p{
+    /* margin: auto;
+    padding: 1rem; */
+    /* display: flex;
+    align-content: flex-start; */
+} 
+
