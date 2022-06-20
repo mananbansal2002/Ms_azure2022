@@ -250,3 +250,57 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }
+
+@media(max-width: 890px)
+{
+	body {
+		background: #f6f5f7;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		font-family: 'Montserrat', sans-serif;
+		height: 100vh;
+		margin: -296px 0 50px;
+	}
+}
+@media(max-width: 500px)
+{
+	form {
+		background-color: #FFFFFF;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 0 11px;
+		height: 100%;
+		text-align: center;
+		margin: 0;
+	}
+}
+@media(max-width: 450px)
+{
+	body {
+		background: #f6f5f7;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		font-family: 'Montserrat', sans-serif;
+		height: 100vh;
+		margin: -136px 0 50px;
+	}
+}
+@media(max-width: 390px)
+{
+	body {
+		background: #f6f5f7;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		font-family: 'Montserrat', sans-serif;
+		height: 100vh;
+		margin: -56px 0 50px;
+	}
+}

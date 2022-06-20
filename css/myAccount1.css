@@ -574,7 +574,7 @@ table td {
     }
 
     .col-md-5 {
-        /* width: 41.66%; */
+        width: 41.66%;
     }
 
     .col-md-6 {
@@ -602,12 +602,28 @@ table td {
     }
 
     .col-md-12 {
-        width: 60%;
+        /* width: 60%; */
     }
+    .f-height {
+        height: 100%;
+        width: 370px;
+    }
+    .latest-transactions{
+        /* margin-left: 10rem; */
+    }
+   
 }
 
 /* SMALL SCREEN */
-
+@media(max-width:1100)
+{
+    .latest-transcations
+    {
+        margin-left: 7rem;
+       
+    }
+   
+}
 @media only screen and (max-width: 850px) {
     .col-sm-1 {
         width: 8.33%;
@@ -656,4 +672,27 @@ table td {
     .col-sm-12 {
         width: 60%;
     }
+}
+
+@media(max-width: 600px)
+{
+    .row{
+    display: flex;
+    justify-content: center;
+    }
+}
+@media(max-width: 500px)
+{
+    .latest-transactions{
+        width: 370px;
+        height: 640px;
+    }
+    .main-header{
+        width: 500px
+    }
+    .row{
+        display: flex;
+        justify-content: center;
+        margin: 0 -94px;
+        }
 }
